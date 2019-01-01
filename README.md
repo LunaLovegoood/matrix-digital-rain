@@ -2,6 +2,8 @@
 
 Matrix digital rain with p5.js
 
+![Matrix digital rain](img/matrix-digital-rain.gif)
+
 ---
 
 ## Contributors
