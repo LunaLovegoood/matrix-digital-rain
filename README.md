@@ -1,6 +1,6 @@
-﻿# Double pendulum
+﻿# Matrix digital rain
 
-Double pendulum with p5.js
+Matrix digital rain with p5.js
 
 ---
 
