@@ -31,9 +31,7 @@ class Matrix {
   }
 
   render() {
-    this._columns.forEach(function(column) {
-      column.render();
-    });
+    this._columns.forEach(column => column.render());
   }
 }
 
@@ -63,9 +61,7 @@ class SymbolColumn {
   }
 
   render() {
-    this._symbols.forEach(function(symbol) {
-      symbol.render();
-    });
+    this._symbols.forEach(symbol => symbol.render());
   }
 }
 
@@ -74,12 +70,12 @@ class Symbol {
     this._x = x;
     this._y = y;
     this._speed = speed;
-    this._switchInterval = round(random(5, 30));
-
-    this._opacity = opacity;
-    this._isFirst = isFirst;
+    this._switchInterval = round(random(5, 20));
 
     this._value;
+    this._color = isFirst
+      ? color(118, 216, 159)
+      : color(57, 192, 70, opacity);
 
     this._setToRandomSymbol();
   }
@@ -91,7 +87,7 @@ class Symbol {
   }
 
   render() {
-    this._isFirst ? fill(118, 216, 159) : fill(57, 192, 70, this._opacity);
+    fill(this._color);
     text(this._value, this._x, this._y);
 
     this._fallDown();
